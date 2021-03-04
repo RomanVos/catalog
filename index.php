@@ -4,19 +4,19 @@ session_start();
 include 'config.php';
 
 //роутінг
-$routes = array(
-    array('url' => '#^$|^\?#', 'view' => 'category'),
-    array('url' => '#^product/(?P<product_alias>[a-z0-9-]+)#i', 'view' => 'product'),
-    array('url' => '#^category/(?P<category_alias>[a-z0-9-]+)#i', 'view' => 'category'),
-    array('url' => '#^add_comment#i', 'view' => 'add_comment'),
-    array('url' => '#^login#i', 'view' => 'login'),
-    array('url' => '#^logout#i', 'view' => 'logout'),
-    array('url' => '#^forgot#i', 'view' => 'forgot'),
-    array('url' => '#^reg#i', 'view' => 'reg'),
-    array('url' => '#^page/(?P<page_alias>[a-z0-9-]+)#i', 'view' => 'page'),
-    array('url' => '#^search#i', 'view' => 'search')
+$routes = [
+    ['url' => '#^$|^\?#', 'view' => 'category'],
+    ['url' => '#^product/(?P<product_alias>[a-z0-9-]+)#i', 'view' => 'product'],
+    ['url' => '#^category/(?P<category_alias>[a-z0-9-]+)#i', 'view' => 'category'],
+    ['url' => '#^add_comment#i', 'view' => 'add_comment'],
+    ['url' => '#^login#i', 'view' => 'login'],
+    ['url' => '#^logout#i', 'view' => 'logout'],
+    ['url' => '#^forgot#i', 'view' => 'forgot'],
+    ['url' => '#^reg#i', 'view' => 'reg'],
+    ['url' => '#^page/(?P<page_alias>[a-z0-9-]+)#i', 'view' => 'page'],
+    ['url' => '#^search#i', 'view' => 'search']
 
-);
+];
 
 //$url = str_replace('/catalog/', '', $_SERVER['REQUEST_URI']);
 $url = ltrim($_SERVER['REQUEST_URI'], '/');
